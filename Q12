@@ -1,0 +1,2 @@
+Update nurse_assignments set hoursassigned =10
+where empid =103 and floorno =3;
