@@ -1,0 +1,6 @@
+Alter table hospital_floor
+add numNursesAssigned NUMBER;
+
+UPDATE hospital_floor SET hospital_floor.numnursesassigned = (SELECT count(empid)
+FROM nurse_assignments
+WHERE hospital_floor.floorno = nurse_assignments.floorno);
