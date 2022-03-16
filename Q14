@@ -1,0 +1,4 @@
+SELECT nurse_assignments.floorno as &quot;Floor Number&quot;,
+count(nurse_assignments.empid) as &quot;Assigned Nurses Num&quot;,
+sum(nurse_assignments.hoursassigned) as &quot;Total Hours Assigned&quot; FROM nurse_assignments
+Group By nurse_assignments.floorno;
