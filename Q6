@@ -1,0 +1,3 @@
+Select *
+from hospital_floor where budget in (
+SELECT MAX(BUDGET) FROM hospital_floor);
