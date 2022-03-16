@@ -1,0 +1,2 @@
+SELECT * FROM FLOOR_NURSE_DETAILS
+Where &quot;Nurse ID&quot; = 101;
