@@ -1,0 +1,2 @@
+SELECT * FROM hospital_floor
+WHERE floorname like &#39;%urn%&#39;;
