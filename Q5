@@ -1,0 +1,6 @@
+Select (nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse Name&quot;, salary as &quot;Lowset Salary&quot; from
+nurse where salary in (
+SELECT min(nurse.salary) FROM nurse
+INNER JOIN hospital_department on nurse.departmentid =
+hospital_department.departmentid
+where hospital_department.departmentname=&#39;Orthodepic&#39;);
