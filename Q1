@@ -1,0 +1,4 @@
+SELECT (nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse Name&quot; FROM nurse
+INNER JOIN hospital_department on nurse.departmentid =
+hospital_department.departmentid
+where hospital_department.departmentname=&#39;Pediatric&#39;;
