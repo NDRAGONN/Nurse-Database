@@ -1,0 +1,6 @@
+Select (nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse Name&quot;,
+hospital_floor.floorname as &quot;Floor Name&quot;, nurse_assignments.rating
+from nurse_assignments
+Inner join nurse on nurse_assignments.empid = nurse.empid
+Inner join hospital_floor on hospital_floor.floorno = nurse_assignments.floorno
+Where nurse_assignments.rating is null;
