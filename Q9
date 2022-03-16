@@ -1,0 +1,7 @@
+CREATE VIEW FLOOR_NURSE_DETAILS AS(
+SELECT hospital_floor.floorno, hospital_floor.floorname,
+nurse_assignments.empid as &quot;Nurse ID&quot;,
+(nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse Name&quot; FROM nurse_assignments
+INNER JOIN hospital_floor ON nurse_assignments.floorno = hospital_floor.floorno
+INNER JOIN nurse ON nurse.empid = nurse_assignments.empid
+);
