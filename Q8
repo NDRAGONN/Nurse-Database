@@ -1,0 +1,6 @@
+SELECT (nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse_Name&quot;, nurse_assignments.rating
+FROM hospital_floor
+Inner join doctor on hospital_floor.supervisor_doctor_id = doctor.empid
+Inner join nurse_assignments on hospital_floor.floorno = nurse_assignments.floorno
+Inner join nurse on nurse.empid = nurse_assignments.empid
+Where doctor.firstname =&#39;Steven&#39; and doctor.lastname =&#39;King&#39;;
