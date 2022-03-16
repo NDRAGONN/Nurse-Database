@@ -1,0 +1,6 @@
+SELECT nurse.EMPID as &quot;Nurse ID&quot;,
+(nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse Name&quot;
+FROM nurse
+Inner join nurse_assignments on nurse.empid = nurse_assignments.empid
+Where nurse_assignments.floorno =&#39;1&#39;
+Order by nurse.lastname;
