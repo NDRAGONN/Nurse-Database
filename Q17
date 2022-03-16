@@ -1,0 +1,7 @@
+Alter table hospital_floor
+add status varchar(10) check (status in (&#39;open&#39;, &#39;quarantine&#39;, &#39;closed&#39;));
+Update hospital_floor set status =&#39;quarantine&#39; where floorno =1;
+Update hospital_floor set status =&#39;closed&#39; where floorno =2;
+Update hospital_floor set status =&#39;open&#39; where status is null;
+Select * from hospital_floor
+where status =&#39;open&#39;;
