@@ -1,0 +1,6 @@
+Select (nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse Name&quot;,
+(Doctor.firstname||&#39; &#39;||Doctor.lastname) as &quot;Manager Name&quot; from nurse
+Inner join hospital_department on nurse.departmentid = hospital_department.departmentid
+Inner join Doctor on doctor.empid = hospital_department.doctorsupervisorid
+where nurse.empid not in (
+Select Distinct empid from nurse_assignments);
