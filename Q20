@@ -1,0 +1,9 @@
+create or replace trigger numnursesassigned_update
+after insert or update
+on nurse_assignments
+for each row
+begin
+UPDATE hospital_floor SET hospital_floor.numnursesassigned = (SELECT count(empid)
+FROM nurse_assignments
+WHERE nurse_assignments.floorno = :new.floorno);
+end;
