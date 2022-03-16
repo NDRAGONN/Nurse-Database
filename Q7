@@ -1,0 +1,6 @@
+SELECT distinct (nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse Name&quot;,
+hospital_department.departmentname as &quot;Department Name&quot;
+FROM nurse
+Inner join nurse_assignments on nurse.empid = nurse_assignments.empid
+Inner join hospital_department on nurse.departmentid = hospital_department.departmentid
+Where nurse_assignments.floorno =&#39;2&#39;;
