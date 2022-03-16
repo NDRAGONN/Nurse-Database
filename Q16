@@ -1,0 +1,5 @@
+Select nurse_assignments.floorno, hospital_floor.floorname from nurse_assignments
+Inner join nurse on nurse_assignments.empid = nurse.empid
+Inner join hospital_floor on nurse_assignments.floorno = hospital_floor.floorno
+Group by nurse_assignments.floorno, hospital_floor.floorname, nurse.departmentid
+Having count(nurse.departmentid) &gt; 1;
