@@ -1,0 +1,2 @@
+SELECT EMPID as &quot;Nurse ID&quot;, (nurse.firstname||&#39; &#39;||nurse.lastname) as &quot;Nurse Name&quot;,
+cast(salary/12 as decimal(18,2)) AS &quot;Monthly Salary&quot; FROM nurse;
