@@ -1,0 +1,8 @@
+Insert into nurse(empid,firstname, lastname, departmentid)
+values (23741,&#39;Nouf&#39;,&#39;Alrumah&#39;, 3);
+Insert into nurse_assignments
+values (1,23741,&#39;11-FEB-22&#39;,8, 1);
+Insert into nurse_assignments
+values (2,23741,&#39;11-MAR-22&#39;,8, 1);
+Select * from floor_nurse_details
+where &quot;Nurse ID&quot; = 23741;
